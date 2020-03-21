@@ -459,6 +459,7 @@ include("include/connect.php");?>
             }), $(".bt-bottom").click(function() {
                 return $("html,body").animate({
                     scrollTop: "99999"
+                    // loi cmt
                 })
             })
         })
