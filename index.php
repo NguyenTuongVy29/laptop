@@ -207,9 +207,9 @@ include("include/connect.php");?>
                     </div>
 
 
-                    <div class="shopping-item">
+                    <!-- <div class="shopping-item">
                         <a href="index.php?content=dangky"> <i class="fa fa-user"></i>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div> <!-- End site branding area -->
