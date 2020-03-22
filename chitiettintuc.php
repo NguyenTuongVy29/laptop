@@ -1,7 +1,7 @@
 ﻿<?php 
 
-	$matt=$_GET['matt'];
-	$sql="select * from tintuc where matt='".$matt."'";
+	$matt=$_GET['idtt'];
+	$sql="select * from tintuc where idtt='".$idtt."'";
 	$select=mysqli_query($conn, $sql);
 	while($row=mysqli_fetch_array($select))
 	{

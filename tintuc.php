@@ -1,7 +1,8 @@
 ﻿<div id="tintuc">
 	<h3>Tin Tức</h3>
 	<?php
-		//$select = mysql_query("select * from tintuc order by matt DESC");
+		// $select = mysqli_query("select * from tintuc order by idtt DESC");
+		
 	
 	
 	/*------------Phan trang------------- */
@@ -22,7 +23,7 @@
 
 		// Chạy 1 MySQL query để hiện thị kết quả trên trang hiện tại  
 
-		$sql = "SELECT * FROM tintuc ORDER by matt DESC  LIMIT $from, $max_results"; 
+		$sql = "SELECT * FROM tintuc ORDER by idtt DESC  LIMIT $from, $max_results"; 
 		$rs=mysqli_query($conn, $sql);
 		while($row=mysqli_fetch_array($rs))
 		{
@@ -31,7 +32,7 @@
 	<div class="tintuccon">
 		<div class="tintuccon-in">
 			<div class="tieudetintuc">
-				<p><a href="index.php?content=chitiettintuc&matt=<?php echo $row['matt'] ?>"><?php echo $row['tieude'] ?></a></p>
+				<p><a href="index.php?content=chitiettintuc&idtt=<?php echo $row['idtt'] ?>"><?php echo $row['tieude'] ?></a></p>
 				<span>Ngày đăng tin: <?php echo $row['ngaydangtin'] ?></span>
 			</div>
 			<div class="imgtintuc">
@@ -40,7 +41,7 @@
 			<div class="noidungtintuc">
 				
 				<span><p> <?php echo $row['ndngan'] ?> </p></span>
-				<p class="xemthem"><a href="index.php?content=chitiettintuc&matt=<?php echo $row['matt'] ?>">Xem thêm >></a></p>
+				<p class="xemthem"><a href="index.php?content=chitiettintuc&idtt=<?php echo $row['idtt'] ?>">Xem thêm >></a></p>
 			</div>
 		</div>
 	</div>

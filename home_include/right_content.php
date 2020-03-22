@@ -57,7 +57,7 @@
       $rows=mysqli_query($conn, $sql);
 while ($row=mysqli_fetch_array($rows))
 {  
-$tongtien+=$_SESSION['cart'][$row['idsp']]*$row['gia']; 
+$tongtien+=$_SESSION['cart'][$row['idsp']]*$row['giaban']; 
 }
 ?> <?php  echo number_format($tongtien,"0",",",".");?> VNĐ
 							</p>

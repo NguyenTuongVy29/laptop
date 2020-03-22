@@ -145,24 +145,24 @@ include("include/connect.php");?>
     <div class="">
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-md-4">
                     <div class="logo">
                         <a href="index.php"><img src="img/logo.png"></a>
                     </div>
                 </div>
 
-                <div class="col-sm-4">
+                <div class="col-md-4">
                     <nav class="navbar navbar-light bg-light">
                         <form class="form-inline">
-                            <input class="form-control mr-sm-2" tTrang chủype="search" placeholder="Tìm kiếm"
-                                aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"
-                                    aria-hidden="true"></i></button>
+                            <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
                         </form>
                     </nav>
                 </div>
 
-                <div class="col-sm-4">
+                <div class="col-md-2">
                     <div class="shopping-item">
                         <a href="index.php?content=cart"><span class="cart-amunt"></span> <i
                                 class="fa fa-shopping-cart"></i> <span class="product-count"> <?php 
@@ -198,21 +198,20 @@ include("include/connect.php");?>
                     }
                     ?> <?php  echo number_format($tongtien,"0",",",".");?> VNĐ
                                 </p>
-
-
-
                                 <?php } ?>
                             </span></a>
-
+                            
                     </div>
+                </div>
 
-
-                    <div class="shopping-item">
-                        <a href="index.php?content=dangky"> <i class="fa fa-user"></i>
+                <div class="col-md-2">
+                    <div class="logo">
+                        <a href="index.php?content=dangky"><i class="fa fa-user" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
-        </div> <!-- End site branding area -->
+        </div> 
+    </div><!-- End site branding area -->
         <?php
     include('./home_include/menu_ngang.php');
     
@@ -253,8 +252,8 @@ include("include/connect.php");?>
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <div class="single-promo promo3">
-                            <i class="fa fa-lock"></i>
-                            <p>Trả góp 0%</p>
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                            <p>Trả góp 0% lãi suất</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
@@ -268,13 +267,13 @@ include("include/connect.php");?>
         </div> <!-- End promo area -->
 
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-sm-3">
                 <?php
     include('home_include/left_content.php');
     ?>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-sm-6">
                 <div id="content">
                     <div id="center-content">
                         <?php include("content_page.php"); ?>
@@ -282,7 +281,7 @@ include("include/connect.php");?>
                 </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-sm-3">
                 <?php
     include('home_include/right_content.php');
     ?>
@@ -459,7 +458,6 @@ include("include/connect.php");?>
             }), $(".bt-bottom").click(function() {
                 return $("html,body").animate({
                     scrollTop: "99999"
-                    // loi cmt
                 })
             })
         })

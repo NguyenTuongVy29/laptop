@@ -1,8 +1,6 @@
 ﻿	<?php 
 	   $sql="select * from loaisp where idloaisp!=1";
 	   $result=mysqli_query($conn,$sql);
-	
-	 
 	    while($row=mysqli_fetch_array($result))
 		{ 
 		?> 	<div class="sanpham"> <?php 
@@ -21,7 +19,7 @@
     	<div class="sanphamcon">
 			<?php while($rows=mysqli_fetch_array($kq))
 			{ ?>
-			<div class="dienthoai">
+			<div class="laptop">
 									<?php 
 										if($rows['khuyenmai1']>0)
 										{
@@ -30,14 +28,15 @@
 									<?php } ?>
 									<a href="#"><img  src="img/uploads/<?php echo $rows['hinhanh'];?>"></a><br>					
 									<p><a href="#" ><?php echo $rows['tensp'];?></a></p><br>
-									<h4><?php echo number_format(($rows['gia']*((100-$rows['khuyenmai1'])/100)),0,",",".");?></h4>
+									<!-- <p><?php echo $row['giacu'];?></p> -->
+									<h4><?php echo number_format(($rows['giaban']*((100-$rows['khuyenmai1'])/100)),0,",",".");?></h4>
 									<div class="button">
 										
 												<h5><a href="index.php?content=chitietsp&idsp=<?php echo $rows['idsp'] ?>" class="chitiet"><button>Chi tiết</button></a></h5>
 											
-												<h5><a href="index.php?content=cart&action=add&idsp=<?php echo $rows['idsp'] ?>"><button>Cho vào giỏ</button></a></h5>
+												<h5><a href="index.php?content=cart&action=add&idsp=<?php echo $rows['idsp'] ?>"><button><i class="fa fa-cart-plus" aria-hidden="true"></i></button></a></h5>
 									</div><!-- End .button-->
-			</div><!-- End .dienthoai-->
+			</div><!-- End .laptop-->
 			
 			<?php } ?>
 			
