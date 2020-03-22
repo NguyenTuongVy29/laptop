@@ -77,14 +77,14 @@ body { font-family:Arial, Helvetica, sans-serif; }
 #content{width:100%; height: auto;float: left;background:white; /*position: fixed;*/}
 #center-content{ width:99%;height:auto; float:left; margin-left:10px; padding-bottom: 20px; }
 .sanpham {width:100%; height:auto; float:left; padding-bottom:30px; margin-top:-22px; float:left; margin-bottom:20px;}
-.sanpham h2 {background:#1b1a1a; text-align:center;  padding-top: 7px;  font-size:30px; height:50px; color:white; text-transform:uppercase;}
+.sanpham h2 {background:#1b1a1a; text-align:center;  padding-top: 17px;  font-size:30px; height:50px; color:white; text-transform:uppercase;}
 .sanphamcon {float:left; width: 100%; height:auto;}
             .sanphamcon p.xemthem1 a {float:right; font-size:13px; margin-top:10px;}
               .sanphamcon p.xemthem1 a:hover { font-size:16px;}
             .laptop {width:32.33%;text-align: center; height:auto; float:left; border:1px solid #e82929; border-radius:5px; margin-top:20px; overflow:hidden;}
             .laptop:hover {border:1px solid #e6e6e6; -webkit-box-shadow: 0 1px 10px #51524f; box-shadow:0 1px 10px #51524f;-moz-box-shadow: 0 1px 10px #51524f;}
               .laptop:nth-child(3n) {float:right;}
-              .laptop:nth-child(3n+2) {margin-left:20px;} 
+              .laptop:nth-child(3n+2) {margin-left:15px;} 
                 .moi h3{width:75px;background:url("./img/moi.png")no-repeat; height:58px; display:block; padding-top:15px; font-size:18px;color:yellow; text-indent:8px; position:absolute;}
                 .laptop a img { padding-left:20px; padding-top:20px; width:350px; height:350px; }
                 .laptop p { text-align:center; margin-top:5px; height:20px; }
@@ -125,6 +125,7 @@ body { font-family:Arial, Helvetica, sans-serif; }
     margin-top: 40px;
     padding: 10px;
     position: relative;
+    margin-left: 20px;
 }
 .shopping-item a {
     color: #666;
@@ -377,12 +378,71 @@ body { font-family:Arial, Helvetica, sans-serif; }
   color: #fff;
   padding: 40px 0 40px;
 }
+.new-area{
+    background:#fbfbfb;
+  color: #fff;
+  padding: 20px 0 20px;
+}
+#danhmucsp h4{
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    /* padding-inline-start: 40px; */
+    color: blue;
+    margin-left: 20px;
+    background-color: wheat;
+}
+#danhmucsp ul {
+    margin-left: 0px;
+}
+#danhmucsp ul li {
+    list-style-type: none;
+    background-color: whitesmoke;
+    margin: 5px 0px 5px 20px;
+    padding: 10px 20px 10px 10px;
+    margin-right: 0;
+    box-shadow: yellowgreen;
+}
+#phukien ul li:hover {
+    background-color: wheat;
+}
+#phukien h4{
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    /* padding-inline-start: 40px; */
+    color: blue;
+    margin-left: 20px;
+    background-color: wheat;
+}
+#phukien ul {
+    margin-left: 0px;
+}
+#phukien ul li {
+    list-style-type: none;
+    background-color: whitesmoke;
+    margin: 5px 0px 5px 20px;
+    padding: 10px 20px 10px 10px;
+    margin-right: 0;
+    box-shadow: yellowgreen;
+}
+#phukien ul li:hover {
+    background-color: wheat;
+}
+.price-old{
+    text-decoration: line-through;
+}
 
 .brands-area {
   border-top:1px solid #e5e5e5;
   border-bottom:1px solid #e5e5e5;
   color: #fff;
   padding: 20px 0 20px;
+  
 }
 
 .promo-area .zigzag-bottom, .brands-area .zigzag-bottom{background: #f4f4f4}
@@ -930,9 +990,24 @@ text-transform: uppercase;}
   right: 0;
   top: -56px;
 }
-
-
-
+#timkiem {
+    padding-top: 50px;
+}
+#timkiem h4 {
+    text-align: center;
+    font-weight: bold;
+}
+#timkiem #select {
+    background-color:whitesmoke;
+} 
+#select2{
+    padding-top: 20px;
+}
+#select .btn-outline-success{
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
 table.shop_table {
     border-bottom: 1px solid #ddd;
     border-right: 1px solid #ddd;
@@ -1180,8 +1255,8 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
           .dangky tr td button:hover{color:white; border:1px solid #f1f1f1; background: green;}
           
           #dangnhap {width:100%;  height:auto;}
-        #dangnhap h4 {background:url(../img/tieudedangnhap.jpg) no-repeat; width:188px; height:50px; padding-top:10px;text-align:center;}
-        #dangnhap-in  {padding-left:5px; width:100%; height:auto;}
+        #dangnhap h4 {background:url(../img/tieudedangnhap.jpg) no-repeat; width:188px; height:50px; padding-top:10px;text-align:center;font-weight: bold;}
+        #dangnhap-in  {padding-left:5px; width:100%; height:auto;background-color:whitesmoke;}
           #dangnhap-in span {font-size:13px; font-weight:bold; padding-bottom:10px;}
           
             #dangnhap-in span#xinchao {text-align:center; padding-bottom:30px; padding-bottom:10px;}
@@ -1191,7 +1266,7 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
             #dangnhap-in span#logout p a {font-weight:normal;}
             #dangnhap-in span#logout p a:hover{text-decoration:underline;}
     
-          #dangnhap-in a button {background:white; margin-left:50px; border:1px solid #e1e1e1; color:black; width:80px; height:25px; cursor:pointer;border:1px solid #e6e6e6; -webkit-box-shadow: 0 1px 5px #848484; box-shadow:0 1px 5px #848484;-moz-box-shadow: 0 1px 5px #848484;}
+          #dangnhap-in a button {background:#F0AD4E; border:1px solid #e1e1e1; color:black; width:100px; height:35px; cursor:pointer;border:1px solid #e6e6e6; -webkit-box-shadow: 0 1px 5px #848484; box-shadow:0 1px 5px #848484;-moz-box-shadow: 0 1px 5px #848484;}
             #dangnhap-in a button:hover {background:blue; border:1px solid #e1e1e1; color:white; }
            
           #dangnhap-in ul {width:100%; height:25px; font-size:12px; padding-top:10px;}
