@@ -405,7 +405,7 @@ body { font-family:Arial, Helvetica, sans-serif; }
     margin-right: 0;
     box-shadow: yellowgreen;
 }
-#phukien ul li:hover {
+#danhmucsp ul li:hover {
     background-color: wheat;
 }
 #phukien h4{
@@ -811,14 +811,14 @@ input[type="text"], input[type="password"], input[type="email"], textarea {
     width: 153px;
 }
 input[type="submit"], button[type=submit] {
-    background: none repeat scroll 0 0 #5a88ca;
+    background: none repeat scroll 0 0 #F0AD4E;
     border: medium none;
     color: #fff;
     height: 32px;
     padding: 8px 20px;
     text-transform: uppercase;
 }
-input[type="submit"]:hover, button[type=submit]:hover {background-color: #222}
+input[type="submit"]:hover, button[type=submit]:hover {background-color: #5a88ca}
 .single-sidebar input[type="text"] {
     margin-bottom: 10px;
     width: 100%;
@@ -1268,7 +1268,8 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
     
           #dangnhap-in a button {background:#F0AD4E; border:1px solid #e1e1e1; color:black; width:100px; height:35px; cursor:pointer;border:1px solid #e6e6e6; -webkit-box-shadow: 0 1px 5px #848484; box-shadow:0 1px 5px #848484;-moz-box-shadow: 0 1px 5px #848484;}
             #dangnhap-in a button:hover {background:blue; border:1px solid #e1e1e1; color:white; }
-           
+            #dangnhap-in  button { border:1px solid #e1e1e1; color:black; cursor:pointer;border:1px solid #e6e6e6; -webkit-box-shadow: 0 1px 5px #848484; box-shadow:0 1px 5px #848484;-moz-box-shadow: 0 1px 5px #848484;}
+            #dangnhap-in  button:hover {background:blue; border:1px solid #e1e1e1; color:white; }
           #dangnhap-in ul {width:100%; height:25px; font-size:12px; padding-top:10px;}
             #dangnhap-in ul li{width:49%; float:left;}
               #dangnhap-in ul li a{color:blue;}
