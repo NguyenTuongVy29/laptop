@@ -125,6 +125,7 @@ body { font-family:Arial, Helvetica, sans-serif; }
     margin-top: 40px;
     padding: 10px;
     position: relative;
+    margin-left: 20px;
 }
 .shopping-item a {
     color: #666;
@@ -390,20 +391,48 @@ body { font-family:Arial, Helvetica, sans-serif; }
     padding: 10px 20px;
     /* padding-inline-start: 40px; */
     color: blue;
+    margin-left: 20px;
     background-color: wheat;
+}
+#danhmucsp ul {
+    margin-left: 0px;
 }
 #danhmucsp ul li {
     list-style-type: none;
     background-color: whitesmoke;
     margin: 5px 0px 5px 20px;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px 10px 10px;
     margin-right: 0;
     box-shadow: yellowgreen;
 }
-#danhmucsp ul li:hover {
+#phukien ul li:hover {
     background-color: wheat;
 }
-
+#phukien h4{
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    /* padding-inline-start: 40px; */
+    color: blue;
+    margin-left: 20px;
+    background-color: wheat;
+}
+#phukien ul {
+    margin-left: 0px;
+}
+#phukien ul li {
+    list-style-type: none;
+    background-color: whitesmoke;
+    margin: 5px 0px 5px 20px;
+    padding: 10px 20px 10px 10px;
+    margin-right: 0;
+    box-shadow: yellowgreen;
+}
+#phukien ul li:hover {
+    background-color: wheat;
+}
 .price-old{
     text-decoration: line-through;
 }
@@ -961,9 +990,24 @@ text-transform: uppercase;}
   right: 0;
   top: -56px;
 }
-
-
-
+#timkiem {
+    padding-top: 50px;
+}
+#timkiem h4 {
+    text-align: center;
+    font-weight: bold;
+}
+#timkiem #select {
+    background-color:whitesmoke;
+} 
+#select2{
+    padding-top: 20px;
+}
+#select .btn-outline-success{
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
 table.shop_table {
     border-bottom: 1px solid #ddd;
     border-right: 1px solid #ddd;
@@ -1211,8 +1255,8 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
           .dangky tr td button:hover{color:white; border:1px solid #f1f1f1; background: green;}
           
           #dangnhap {width:100%;  height:auto;}
-        #dangnhap h4 {background:url(../img/tieudedangnhap.jpg) no-repeat; width:188px; height:50px; padding-top:10px;text-align:center;}
-        #dangnhap-in  {padding-left:5px; width:100%; height:auto;}
+        #dangnhap h4 {background:url(../img/tieudedangnhap.jpg) no-repeat; width:188px; height:50px; padding-top:10px;text-align:center;font-weight: bold;}
+        #dangnhap-in  {padding-left:5px; width:100%; height:auto;background-color:whitesmoke;}
           #dangnhap-in span {font-size:13px; font-weight:bold; padding-bottom:10px;}
           
             #dangnhap-in span#xinchao {text-align:center; padding-bottom:30px; padding-bottom:10px;}
@@ -1222,7 +1266,7 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
             #dangnhap-in span#logout p a {font-weight:normal;}
             #dangnhap-in span#logout p a:hover{text-decoration:underline;}
     
-          #dangnhap-in a button {background:white; margin-left:50px; border:1px solid #e1e1e1; color:black; width:80px; height:25px; cursor:pointer;border:1px solid #e6e6e6; -webkit-box-shadow: 0 1px 5px #848484; box-shadow:0 1px 5px #848484;-moz-box-shadow: 0 1px 5px #848484;}
+          #dangnhap-in a button {background:#F0AD4E; border:1px solid #e1e1e1; color:black; width:100px; height:35px; cursor:pointer;border:1px solid #e6e6e6; -webkit-box-shadow: 0 1px 5px #848484; box-shadow:0 1px 5px #848484;-moz-box-shadow: 0 1px 5px #848484;}
             #dangnhap-in a button:hover {background:blue; border:1px solid #e1e1e1; color:white; }
            
           #dangnhap-in ul {width:100%; height:25px; font-size:12px; padding-top:10px;}

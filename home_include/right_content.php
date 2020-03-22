@@ -15,59 +15,15 @@
 							<form action="dangnhap.php" method="post">
 								<span><p>Username: <input type="text" size="10" name="user"></p> <br>
 								<p>Password: <input type="password" size="10" name="pass"></p> <br></span>
-								<a href="index.php?content=dangnhap"><button name="login">Đăng nhập</button></a><br>
+								<a href="index.php?content=dangnhap"><button class="btn btn-warning" name="login">Đăng nhập</button></a>
+								<button class ="btn btn-warning"><a href="index.php?content=dangky">Đăng ký</a></button>
 							</form>
-							<ul>
-								<li><a href="index.php?content=dangky">Đăng ký</a></li>
-							</ul>
+							
 						</div><!-- End .dangnhap-in-->
 						<?php } ?>
 					</div><!-- End .center1-->
 				</div><!-- End .dangnhap-->
-				<div id="giohang">
-					<div class="center1">
-						<h4>GIỎ HÀNG</h4>
-							<a href="index.php?content=cart"><img src="img/images.jpg" title="Vào giỏ hàng" width="150" height="100px"></a>
-							<?php 
-								$tongtien=0;
-								if(isset($_SESSION['cart']))
-								$count=count($_SESSION['cart']);
-								else $count=0;
-								if($count==0){
-							?>
-							<p>Không có sản phẩm</p>
-							<?php } 
-							else {
-							?>
-							<p id="soluonggioh ang">Có <span><?=$count?></span> sản phẩm trong giỏ</p>
-							 
-							<p id="tiengiohang">
-							 <?php $sql ="select * from sanpham where idsp in(";
-        
-		foreach($_SESSION['cart'] as $id => $soluong)
-            {
-              if($soluong>0)
-                $sql .= $id.",";
-            }
-            if (substr($sql,-1,1)==',')
-            {
-                $sql = substr($sql,0,-1);
-            }
-      $sql .=' )order by idsp 	';
-      $rows=mysqli_query($conn, $sql);
-while ($row=mysqli_fetch_array($rows))
-{  
-$tongtien+=$_SESSION['cart'][$row['idsp']]*$row['gia']; 
-}
-?> <?php  echo number_format($tongtien,"0",",",".");?> VNĐ
-							</p>
-							
 
-          
-					<?php } ?>		
-							
-					</div><!-- End .center1-->
-				</div><!-- End .giohang-->
 				<div id="timkiem">
 					<div class="center1">
 						<h4>TÌM KIẾM </h4>
