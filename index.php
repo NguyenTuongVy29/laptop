@@ -164,6 +164,10 @@ include("include/connect.php");?>
 
                 <div class="col-sm-4">
                     <div class="shopping-item">
+                        <a href="index.php?content=dangky"> <i class="fa fa-user"></i>
+                    </div>
+                        
+                    <div class="shopping-item">
                         <a href="index.php?content=cart"><span class="cart-amunt"></span> <i
                                 class="fa fa-shopping-cart"></i> <span class="product-count"> <?php 
 								$tongtien=0;
@@ -179,37 +183,30 @@ include("include/connect.php");?>
                                 <p id="soluonggiohang"><span><?=$count?></span></p>
 
                                 <p id="tiengiohang">
-                                    <?php $sql ="select * from sanpham where idsp in(";
+                                    <!-- <?php $sql ="select * from sanpham where idsp in(";
         
-                            foreach($_SESSION['cart'] as $id => $soluong)
-                                {
-                                if($soluong>0)
-                                    $sql .= $id.",";
+                                        foreach($_SESSION['cart'] as $id => $soluong)
+                                            {
+                                            if($soluong>0)
+                                                $sql .= $id.",";
+                                            }
+                                            if (substr($sql,-1,1)==',')
+                                            {
+                                                $sql = substr($sql,0,-1);
+                                            }
+                                    $sql .=' )order by idsp 	';
+                                    $rows=mysqli_query($conn, $sql);
+                                while ($row=mysqli_fetch_array($rows))
+                                { 
+                                $tongtien+=$_SESSION['cart'][$row['idsp']]*$row['gia']; 
                                 }
-                                if (substr($sql,-1,1)==',')
-                                {
-                                    $sql = substr($sql,0,-1);
-                                }
-                        $sql .=' )order by idsp 	';
-                        $rows=mysqli_query($conn, $sql);
-                    while ($row=mysqli_fetch_array($rows))
-                    { 
-                    $tongtien+=$_SESSION['cart'][$row['idsp']]*$row['gia']; 
-                    }
-                    ?> <?php  echo number_format($tongtien,"0",",",".");?> VNĐ
-                                </p>
+                                ?> <?php  echo number_format($tongtien,"0",",",".");?> VNĐ
+                                            </p>
 
-
-
-                                <?php } ?>
+                                <?php } ?> -->
                             </span></a>
 
                     </div>
-
-
-                    <!-- <div class="shopping-item">
-                        <a href="index.php?content=dangky"> <i class="fa fa-user"></i>
-                    </div> -->
                 </div>
             </div>
         </div> <!-- End site branding area -->
@@ -234,7 +231,7 @@ include("include/connect.php");?>
             </div>
             <!-- ./Slider -->
         </div> <!-- End slider area -->
-
+                  
         <div class="promo-area">
             <div class="zigzag-bottom"></div>
             <div class="container">
@@ -266,28 +263,28 @@ include("include/connect.php");?>
                 </div>
             </div>
         </div> <!-- End promo area -->
-
-        <div class="row">
-            <div class="col-md-3">
-                <?php
-    include('home_include/left_content.php');
-    ?>
-            </div>
-
-            <div class="col-md-6">
-                <div id="content">
-                    <div id="center-content">
-                        <?php include("content_page.php"); ?>
+        <div class="new-area"></div> 
+                <div class="row">
+                    <div class="col-md-2 col-sm-2">
+                        <?php
+                        include('home_include/left_content.php');
+                        ?>
                     </div>
-                </div>
-            </div>
 
-            <div class="col-md-3">
-                <?php
-    include('home_include/right_content.php');
-    ?>
-            </div>
-        </div>
+                    <div class="col-md-8 col-sm-8">
+                        <div id="content">
+                            <div id="center-content">
+                                <?php include("content_page.php"); ?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 col-sm-2">
+                        <?php
+                        include('home_include/right_content.php');
+                        ?>
+                    </div>     
+                </div>
 
     </div><!-- End .main-content -->
     <div class="footer-top-area">
