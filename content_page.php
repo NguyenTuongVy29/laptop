@@ -86,11 +86,11 @@
 							$query1=mysqli_query($conn,$sql1);
 							$row=mysqli_fetch_array($query1);
 							?>
-						<h2><?php echo $row['tenloaisp']?></h2>
+							<h2><?php echo $row['tenloaisp']?></h2>
 							<div class="sanphamcon">
 								<div id="xemthem">
-				<p><a href="index.php?loaisp=<?php echo $row['idloaisp']?>">Xem thêm >></a></p>
-			</div>
+								<p><a href="index.php?loaisp=<?php echo $row['idloaisp']?>">Xem thêm >></a></p>
+							</div>
 								<?php 
 								  while ($result=mysqli_fetch_array($query))
 								  { ?>
@@ -185,7 +185,7 @@
 									<?php } ?>
 							<h1><a href="#"><img  src="img/uploads/<?php echo $row['hinhanh'];?>"></a></h1>				
 							<p><a href="#" ><?php echo $row['tensp'];?></a></p></br>
-							<p><?php echo $row['giacu'];?></p>
+							<p class ="price-old"><?php echo $row['giacu'];?></p>
 							<h4>Giá: <?php echo number_format(($row['giaban']*((100-$row['khuyenmai1'])/100)),0,",",".");?></h4>
 							<div class="button">
 
@@ -222,7 +222,7 @@
 									<?php } ?>
 							<h1><a href="#"><img  src="img/uploads/<?php echo $row['hinhanh'];?>"></a></h1>				
 							<p><a href="#" ><?php echo $row['tensp'];?></a></p></br>
-							<p><?php echo $row['giacu'];?></p>
+							<p class="price-old"><?php echo $row['giacu'];?></p>
 							<h4><?php echo number_format(($row['giaban']*((100-$row['khuyenmai1'])/100)),0,",",".");?></h4>
 							<div class="button">
 
