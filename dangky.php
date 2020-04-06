@@ -21,7 +21,7 @@
 		<tr>
 			<td>Giới tính </td><td class="input">
 				<select name="gioitinh">
-					<option value="">-Chọn giới tính-</option>
+					<option value=""></option>
 					<option value="nam">Nam</option>
 					<option value="nu">Nữ</option>
 				</select>

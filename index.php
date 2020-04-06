@@ -155,7 +155,7 @@ include("include/connect.php");?>
                     <nav class="navbar navbar-light bg-light">
                         <form class="form-inline">
                             <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name=tim>
                                 <i class="fa fa-search" aria-hidden="true"></i>
                             </button>
                         </form>

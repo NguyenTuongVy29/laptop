@@ -33,7 +33,7 @@
 									<div class="button">
 												<h5><a href="index.php?content=chitietsp&idsp=<?php echo $rows['idsp'] ?>" class="chitiet"><button>Chi tiết</button></a></h5>
 
-												<h5><a href="index.php?content=cart&action=add&idsp=<?php echo $rows['idsp'] ?>"><button><i class="fa fa-cart-plus" aria-hidden="true"></i></button></a></h5>
+												<h5><a href="index.php?content=cart&action=add&idsp=<?php echo $rows['idsp'] ?>"><button><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button></a></h5>
 									</div><!-- End .button-->
 			</div><!-- End .laptop-->
 			

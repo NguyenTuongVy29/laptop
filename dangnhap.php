@@ -11,7 +11,7 @@
                         }
                         else{
                         ?>
-                         <!-- <div id="dangnhap-in">
+                          <div id="dangnhap-in">
                             <form action="dangnhap.php" method="post">
                                 <span><p>Username: <input type="text" size="10" name="user"></p> <br>
                                 <p>Password: <input type="password" size="10" name="pass"></p> <br></span>
@@ -20,9 +20,9 @@
                             <ul>
                                 <li><a href="index.php?content=dangky">Đăng ký</a></li>
                             </ul> 
-                        </div>  End .dangnhap-in
+                        </div>  <!--End .dangnhap-in -->
                         <?php } ?>
-                    </div>--><!-- End .center1-->
+                    </div><!-- End .center1-->
                 </div>
 <?php
 // session_start();
@@ -36,7 +36,7 @@ if(isset($_POST['login']))
     $dem = mysqli_num_rows($sql_check);
     if($dem == 0)
     {
-        $_SESSION['thongbaolo'] = "Tài khoản không thồn tại";
+        $_SESSION['thongbaoloi'] = "Tài khoản không thồn tại";
         echo "
                             <script language='javascript'>
                                 alert('Tài khoản không tồn tại');

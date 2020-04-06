@@ -2,25 +2,25 @@
 if(isset($_GET['timkiem']))
 {
   $tim=$_GET['timkiem'];
-  switch($_GET['gia'])
+  switch($_GET['giaban'])
   {
 	case "1":
-		$sql="select * FROM sanpham WHERE tensp like '%".$tim."%' and (gia between '0' and '1000000')";	
+		$sql="select * FROM sanpham WHERE tensp like '%".$tim."%' and (giaban between '0' and '1000000')";	
 	break;
 	case "2":
-		$sql="select * FROM sanpham WHERE tensp like '%".$tim."%'  and (gia between '1000000' and '3000000')";	
+		$sql="select * FROM sanpham WHERE tensp like '%".$tim."%'  and (giaban between '1000000' and '3000000')";	
 	break;
 	case "3":
-		$sql="select * FROM sanpham WHERE tensp like '%".$tim."%'  and (gia between '3000000' and '5000000')";	
+		$sql="select * FROM sanpham WHERE tensp like '%".$tim."%'  and (giaban between '3000000' and '5000000')";	
 	break;
 	case "4":
-		$sql="select * FROM sanpham WHERE tensp like '%".$tim."%'  and (gia between '5000000' and '8000000')";	
+		$sql="select * FROM sanpham WHERE tensp like '%".$tim."%'  and (giaban between '5000000' and '8000000')";	
 	break;
 	case "5":
-		$sql="select * FROM sanpham WHERE tensp like '%".$tim."%'  and (gia between '8000000' and '10000000')";	
+		$sql="select * FROM sanpham WHERE tensp like '%".$tim."%'  and (giaban between '8000000' and '10000000')";	
 	break;
 	case "6":
-		$sql="select * FROM sanpham WHERE tensp like '%".$tim."%'  and (gia >= '10000000')";	
+		$sql="select * FROM sanpham WHERE tensp like '%".$tim."%'  and (giaban >= '10000000')";	
 	break;
 	default:
 	  $sql="select * FROM sanpham WHERE tensp like '%".$tim."%' ";	
@@ -28,8 +28,8 @@ if(isset($_GET['timkiem']))
   }
   
  
-	$rows=mysql_query($sql);
-	$tong=mysql_num_rows($rows);
+	$rows=mysqli_query($conn,$sql);
+	$tong=mysqli_num_rows($rows);
     if($tong<0)
      echo"Không tìm được sản phẩm nào";
     else
@@ -44,7 +44,7 @@ if(isset($_GET['timkiem']))
         {
 ?>
 		
-		<div class="dienthoai">
+		<div class="laptop">
 			<?php 
 										if($row['khuyenmai1']>0)
 										{
@@ -53,14 +53,14 @@ if(isset($_GET['timkiem']))
 									<?php } ?>
 			<a href="#"><img  src="img/uploads/<?php echo $row['hinhanh'];?>"></a>					
 			<p><a href="#" ><?php echo $row['tensp'];?></a></p>
-			<h4><?php echo number_format(($row['gia']*((100-$row['khuyenmai1'])/100)),0,",",".");?></h4>
+			<h4><?php echo number_format(($row['giaban']*((100-$row['khuyenmai1'])/100)),0,",",".");?></h4>
 				<div class="button">
 										
 												<h5><a href="index.php?content=chitietsp&idsp=<?php echo $row['idsp'] ?>" class="chitiet"><button>Chi tiết</button></a></h5>
 											
 												<h5><a href="index.php?content=cart&action=add&idsp=<?php echo $row['idsp'] ?>"><button>Cho vào giỏ</button></a></h5>
 									</div><!-- End .button-->
-		</div><!-- End .dienthoai-->
+		</div><!-- End .laptop-->
 	<?php } ?>
 		</div><!-- End .sanphamcon-->
 	</div><!-- End .sanpham-->

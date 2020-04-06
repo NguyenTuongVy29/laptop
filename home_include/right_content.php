@@ -1,28 +1,5 @@
 ﻿ <div id="dangnhap">
-					<div class="center1">
-						<h4>ĐĂNG NHẬP</h4>
-						<?php if(isset( $_SESSION['username'])){
-							?>
-								<div id="dangnhap-in">
-								<span id="xinchao"><p>Xin chào: <span> <?php echo $_SESSION['username'] ?> </span></p></span>
-								<span id="logout"><p><a href="logout.php">Logout</a></p></span>
-						</div><!-- End .dangnhap-in-->
-							<?php 
-						}
-						else{
-						?>
-						<div id="dangnhap-in">
-							<form action="dangnhap.php" method="post">
-								<span><p>Username: <input type="text" size="10" name="user"></p> <br>
-								<p>Password: <input type="password" size="10" name="pass"></p> <br></span>
-								<a href="index.php?content=dangnhap"><button class="btn btn-warning" name="login">Đăng nhập</button></a>
-								<button class ="btn btn-warning"><a href="index.php?content=dangky">Đăng ký</a></button>
-							</form>
-							
-						</div><!-- End .dangnhap-in-->
-						<?php } ?>
-					</div><!-- End .center1-->
-				</div><!-- End .dangnhap-->
+					
 
 				<div id="timkiem">
 					<div class="center1">
@@ -57,18 +34,5 @@
 						<h2><a href="ymsgr:sendim?boydangyeu8188&amp;m=g&amp;t=14"><img src="img/imonline.png"></a></h2>
 							<p>0982612514</p>
 					</div><!-- End .center1-->
-				</div><!-- End .yahoo -->
-				
-				<div id="fb-root">
-					<div class="center1">
-						<div id="fb-root"></div>
-						<script>(function(d, s, id) {
-						  var js, fjs = d.getElementsByTagName(s)[0];
-						  if (d.getElementById(id)) return;
-						  js = d.createElement(s); js.id = id;
-						  js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1";
-						  fjs.parentNode.insertBefore(js, fjs);
-						}(document, 'script', 'facebook-jssdk'));</script>
-						<div class="fb-like-box" data-href="https://www.facebook.com/dienthoaiabc" data-width="188" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="false"></div>
-					</div><!-- End .center1 -->
-				</div><!-- End .facebook -->
+							
+				</div>
